@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+        h2 {
+            color: orangered;
+        }
+        form {
+          max-width: 800px;
+        }
+        .form-section {
+            margin-bottom: 20px;
+        }
+        .form-group {
+          display: flex;
+          align-items: center;
+          margin-bottom: 12px;
+        }
+        .form-group label {
+            width: 200px;
+            font-size: 16px;
+        }
+        .form-group input{
+            flex: 1;
+            padding: 6px;
+            font-size: 16px;
+        }
+        .submit-buttons {
+            margin-top: 30px;
+        }
+        input[type="submit"] {
+            padding: 8px 16px;
+            background-color: #4d90fe;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #357ae8;
+        }
+           .top-right {
+                position: absolute;
+                top: 20px;
+                right:30px
+            }
+            .top-right button {
+                background-color: white;
+                border: 1px solid black;
+                padding: 8px 16px;
+                font-size: 14px;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+            .top-right button:hover {
+                background-color: lightgray;
+            }
+        </style>
+        <script>
+            function gotoindex() {
+                window.location.href = 'index.html';
+            }
+        </script>
+</head>
+<body>
+    <h2>Advanced Search</h2>
+    <form action="https://www.google.com/search" method="GET">
+        <div class="form-section">
+            <div class="form-group">
+                <label for="as_q">All these words:</label>
+                <input type="Text" name="as_q" id="as_q" placeholder="Enter words...">
+            </div>
+            <div class="form-group">
+                <label for="as_epq">This exact word or phrase:</label>
+                <input type="text" name="as_epq" id="as_epq" placeholder="Enter exact phrase...">
+            </div>
+            <div class="form-group">
+                <label for="as_oq">Any of these words:</label>
+                <input type="text" name="as_oq" id="as_oq" placeholder="Enter any words...">
+            </div>
+            <div class="form-group">
+                <label for="as_eq">None of these words:</label>
+                <input type="text" name="as_eq" id="as_eq" placeholder="Enter words to exclude...">
+            </div>
+            </div>
+            <div class="submit-buttons">
+                <input type="submit" value=" Advanced Search">
+                </div>
+                </form>
+        <div class="top-right">
+            <button onclick="gotoindex()">Back to Search</button>
+        </div>
+    </body>
+</html>
